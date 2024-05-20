@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.Payment" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tvTotalProductPrice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/name_edittext3"
+            android:layout_width="374dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittext_code"
+            android:hint="E-mail"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:paddingStart="8dp"
+            android:text=""
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surname_edittext" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:text="Card Information"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:background="#A19E9E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/advisorNotesText" />
+
+        <EditText
+            android:id="@+id/surname_edittext"
+            android:layout_width="374dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittext_code"
+            android:hint="Surname"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:paddingStart="8dp"
+            android:text=""
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_edittext" />
+
+        <TextView
+            android:id="@+id/tv_Payment_Total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Total:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/tv_Payment_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="$999"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:background="#A19E9E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCvvInfo" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="Contact Information"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/btnCountryCode"
+            android:layout_width="115dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/activatedBackgroundIndicator"
+            android:gravity="center"
+            android:paddingRight="8dp"
+            app:ccpDialog_showFlag="true"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_defaultLanguage="TURKISH"
+            app:ccp_defaultPhoneCode="90"
+            app:ccp_showFlag="true"
+            app:ccp_textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_edittext3" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtCustomerPhone"
+            android:layout_width="263dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittext_code"
+            android:gravity="center_vertical"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:longClickable="false"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:textSize="16sp"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnCountryCode"
+            app:layout_constraintTop_toBottomOf="@+id/name_edittext3" />
+
+        <EditText
+            android:id="@+id/name_edittext"
+            android:layout_width="374dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittext_code"
+            android:hint="Name"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:paddingStart="8dp"
+            android:text=""
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/advisorNotesText"
+            android:layout_width="374dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittext_code"
+            android:gravity="start"
+            android:hint="Address"
+            android:maxLines="3"
+            android:minLines="3"
+            android:padding="8dp"
+            android:paddingStart="8dp"
+            android:text=""
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCountryCode" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtCardInfo"
+            android:layout_width="374dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edittext_code"
+            android:gravity="center_vertical"
+            android:hint="Card Number"
+            android:inputType="phone"
+            android:longClickable="false"
+            android:maxLength="19"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:textSize="16sp"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtCvvInfo"
+            android:layout_width="96dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_code"
+            android:gravity="center_vertical"
+            android:hint="Cvv"
+            android:inputType="phone"
+            android:longClickable="false"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:textSize="16sp"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCardInfo" />
+
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/number_picker_month"
+            android:layout_width="57dp"
+            android:layout_height="38dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_code"
+            app:layout_constraintStart_toEndOf="@+id/txtCvvInfo"
+            app:layout_constraintTop_toBottomOf="@+id/txtCardInfo"
+            app:np_dividerColor="@color/black"
+            app:np_formatter="@string/number_picker_formatter"
+            app:np_height="180dp"
+            app:np_max="12"
+            app:np_min="01"
+            app:np_selectedTextColor="@color/black"
+            app:np_selectedTextSize="15sp"
+            app:np_textColor="@color/black"
+            app:np_textSize="5sp"
+            app:np_value="01"
+            app:np_width="64dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="16dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="/"
+            android:textSize="37sp"
+            app:layout_constraintStart_toEndOf="@+id/number_picker_month"
+            app:layout_constraintTop_toBottomOf="@+id/txtCardInfo" />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/number_picker_year"
+            android:layout_width="57dp"
+            android:layout_height="38dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_code"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/txtCardInfo"
+            app:np_dividerColor="@color/black"
+            app:np_formatter="@string/number_picker_formatter"
+            app:np_height="180dp"
+            app:np_max="2028"
+            app:np_min="2024"
+            app:np_selectedTextColor="@color/black"
+            app:np_selectedTextSize="15sp"
+            app:np_textColor="@color/black"
+            app:np_textSize="5sp"
+            app:np_value="2024"
+            app:np_width="64dp" />
+
+        <Button
+            android:id="@+id/btn_OrderNow"
+            android:layout_width="273dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="20dp"
+            android:text="Order Now"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Payment_Total" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

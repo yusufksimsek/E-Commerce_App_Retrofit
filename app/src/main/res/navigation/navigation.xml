@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home2">
+    <fragment
+        android:id="@+id/productDetail"
+        android:name="com.example.e_commerce_app_retrofit.view.ProductDetail"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" >
+        <!--suppress NavigationFile -->
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+        <!--suppress NavigationFile -->
+        <argument
+            android:name="productName"
+            app:argType="string" />
+        <!--suppress NavigationFile -->
+        <argument
+            android:name="productImage"
+            app:argType="string" />
+        <!--suppress NavigationFile -->
+        <argument
+            android:name="productPrice"
+            app:argType="float" />
+        <!--suppress NavigationFile -->
+        <argument
+            android:name="productDescription"
+            app:argType="string" />
+        <!--suppress NavigationFile -->
+        <argument
+            android:name="productRating"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_productDetail_to_card3"
+            app:destination="@id/card3" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorite2"
+        android:name="com.example.e_commerce_app_retrofit.view.Favorite"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favorite2_to_productDetail"
+            app:destination="@id/productDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.e_commerce_app_retrofit.view.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_productDetail"
+            app:destination="@id/productDetail" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/card3"
+        android:name="com.example.e_commerce_app_retrofit.view.Card"
+        android:label="fragment_card"
+        tools:layout="@layout/fragment_card" >
+        <action
+            android:id="@+id/action_card3_to_payment"
+            app:destination="@id/payment" />
+    </fragment>
+    <fragment
+        android:id="@+id/payment"
+        android:name="com.example.e_commerce_app_retrofit.view.Payment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <!--suppress NavigationFile -->
+        <argument
+            android:name="totalProductPrice"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_payment_to_ordered"
+            app:destination="@id/ordered" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordered"
+        android:name="com.example.e_commerce_app_retrofit.view.Ordered"
+        android:label="fragment_ordered"
+        tools:layout="@layout/fragment_ordered" />
+</navigation>
