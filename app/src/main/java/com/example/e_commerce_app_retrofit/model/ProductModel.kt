@@ -9,7 +9,6 @@ data class ModelItem(
     val rating: Rating,
     var title: String,
     var quantity: Int
-
 )
 
 data class Rating(

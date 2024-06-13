@@ -7,21 +7,26 @@
     android:layout_height="match_parent"
     tools:context=".view.Home" >
 
-    <EditText
-        android:id="@+id/editTextSearch"
-        android:layout_width="370dp"
-        android:layout_height="50dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
-        android:hint="Search"
-        android:paddingLeft="15dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tvCategories"
@@ -33,7 +38,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSearch" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_Categories"

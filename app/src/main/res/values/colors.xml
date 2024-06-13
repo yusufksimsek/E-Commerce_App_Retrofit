@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="selectedCategoryColor">#9A94B6</color>
     <color name="purple_700">#6D46B3</color>
+    <color name="purple_ordered">#DCD1F1</color>
 
 </resources>

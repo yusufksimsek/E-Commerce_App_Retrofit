@@ -82,5 +82,9 @@
         android:id="@+id/ordered"
         android:name="com.example.e_commerce_app_retrofit.view.Ordered"
         android:label="fragment_ordered"
-        tools:layout="@layout/fragment_ordered" />
+        tools:layout="@layout/fragment_ordered" >
+        <action
+            android:id="@+id/action_ordered_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
 </navigation>

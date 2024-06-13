@@ -40,8 +40,7 @@ class Favorite : Fragment() {
     }
 
     private fun loadFavorites(): List<ModelItem> {
-        val sharedPreferences =
-            requireContext().getSharedPreferences("Favorites", Context.MODE_PRIVATE)
+        val sharedPreferences = requireContext().getSharedPreferences("Favorites", Context.MODE_PRIVATE)
         val favoriProducts = sharedPreferences.all.keys.toList()
         Log.e("Favorite Products", favoriProducts.toString())
 

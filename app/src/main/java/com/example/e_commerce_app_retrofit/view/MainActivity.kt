@@ -2,6 +2,7 @@ package com.example.e_commerce_app_retrofit.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -21,6 +22,14 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment =
         supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         navController = navHostFragment.navController
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.ordered) {
+                binding.bottomNavigationView.visibility = View.GONE
+            } else {
+                binding.bottomNavigationView.visibility = View.VISIBLE
+            }
+        }
 
         binding.bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
